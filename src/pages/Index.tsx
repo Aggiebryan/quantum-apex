@@ -32,20 +32,22 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23334155" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Complete
             <span className="block bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
               Legal Practice
             </span>
             Management Solution
           </h1>
-          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto animate-fade-in">
+          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
             Streamline your law firm with our all-in-one platform. Case management, client communication, 
             billing, and automation tools designed specifically for legal professionals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-amber-400 hover:bg-amber-500 text-slate-900 text-lg px-8 py-3">
               Start Your Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
