@@ -135,7 +135,7 @@ const Signup = () => {
               </div>
 
               <div className="flex items-center space-x-2">
-                <Checkbox id="betaTester" checked={formData.betaTester} onCheckedChange={checked => handleInputChange("betaTester", checked as boolean)} className="text-slate-300" />
+                <Checkbox id="betaTester" checked={formData.betaTester} onCheckedChange={checked => handleInputChange("betaTester", checked as boolean)} className="text-slate-300 bg-slate-400 hover:bg-slate-300" />
                 <Label htmlFor="betaTester" className="text-white">
                   I would be interested in being a beta tester when the software is ready
                 </Label>
