@@ -47,7 +47,7 @@ const Signup = () => {
           <div className="flex justify-between items-center py-4">
             <Link to="/" className="flex items-center space-x-2">
               <img src="/lovable-uploads/7ba84437-bb36-4aac-ab98-2a302086bf5a.png" alt="Quantum Apex Legal" className="h-8 w-8" />
-              <span className="text-2xl font-bold text-white">Quantum Apex Legal</span>
+              <span className="text-2xl font-bold text-white">Quantum Apex Legal Systems</span>
             </Link>
             <Link to="/">
               <Button variant="outline" className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900">
@@ -64,7 +64,7 @@ const Signup = () => {
           <AlertCircle className="h-16 w-16 text-amber-400 mx-auto mb-6" />
           <h1 className="text-4xl font-bold text-white mb-4">Software In Development</h1>
           <p className="text-xl text-slate-300 mb-8">
-            Quantum Apex Legal is currently in development. Join our waitlist to be notified when we launch!
+            Quantum Apex is currently in development. Join our waitlist to be notified when we launch!
           </p>
         </div>
 
