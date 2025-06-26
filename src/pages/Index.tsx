@@ -1,6 +1,8 @@
 import { ArrowRight, Users, FileText, Calendar, DollarSign, Shield, Clock, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+
 const Index = () => {
   return <div className="min-h-screen bg-slate-900">
       {/* Navigation */}
@@ -16,12 +18,16 @@ const Index = () => {
               <a href="#solutions" className="text-slate-300 hover:text-white transition-colors">Solutions</a>
               <a href="#pricing" className="text-slate-300 hover:text-white transition-colors">Pricing</a>
               <a href="#contact" className="text-slate-300 hover:text-white transition-colors">Contact</a>
-              <Button variant="outline" className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900">
-                Sign In
-              </Button>
-              <Button className="bg-amber-400 hover:bg-amber-500 text-slate-900">
-                Start Free Trial
-              </Button>
+              <Link to="/signup">
+                <Button variant="outline" className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900">
+                  Sign In
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button className="bg-amber-400 hover:bg-amber-500 text-slate-900">
+                  Start Free Trial
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -45,10 +51,12 @@ const Index = () => {
             billing, and automation tools designed specifically for legal professionals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-amber-400 hover:bg-amber-500 text-slate-900 text-lg px-8 py-3">
-              Start Your Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/signup">
+              <Button size="lg" className="bg-amber-400 hover:bg-amber-500 text-slate-900 text-lg px-8 py-3">
+                Start Your Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 text-lg px-8 py-3">
               Watch Demo
             </Button>
@@ -70,65 +78,77 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <FileText className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Case Management</h3>
-                <p className="text-slate-300">
-                  Organize cases, documents, and deadlines with our intuitive case management system.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/case-management">
+              <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <FileText className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">Case Management</h3>
+                  <p className="text-slate-300">
+                    Organize cases, documents, and deadlines with our intuitive case management system.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Users className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Client Portal</h3>
-                <p className="text-slate-300">
-                  Secure client communication and document sharing with branded client portals.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/client-portal">
+              <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <Users className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">Client Portal</h3>
+                  <p className="text-slate-300">
+                    Secure client communication and document sharing with branded client portals.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <DollarSign className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Billing & Invoicing</h3>
-                <p className="text-slate-300">
-                  Automated time tracking, billing, and payment processing with trust accounting.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/billing-invoicing">
+              <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <DollarSign className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">Billing & Invoicing</h3>
+                  <p className="text-slate-300">
+                    Automated time tracking, billing, and payment processing with trust accounting.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Calendar className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Calendar & Scheduling</h3>
-                <p className="text-slate-300">
-                  Integrated calendar with court date tracking and automated deadline calculations.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/calendar-scheduling">
+              <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <Calendar className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">Calendar & Scheduling</h3>
+                  <p className="text-slate-300">
+                    Integrated calendar with court date tracking and automated deadline calculations.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Shield className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Security & Compliance</h3>
-                <p className="text-slate-300">
-                  Bank-level security with SOC 2 compliance and attorney-client privilege protection.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/security-compliance">
+              <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <Shield className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">Security & Compliance</h3>
+                  <p className="text-slate-300">
+                    Bank-level security with SOC 2 compliance and attorney-client privilege protection.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Clock className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>
-                <p className="text-slate-300">
-                  Workflow automation for routine tasks, document generation, and client intake.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/automation">
+              <Card className="bg-slate-700 border-slate-600 hover:border-amber-400 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <Clock className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>
+                  <p className="text-slate-300">
+                    Workflow automation for routine tasks, document generation, and client intake.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
@@ -283,9 +303,11 @@ const Index = () => {
                     <li className="flex items-center"><CheckCircle className="h-4 w-4 text-amber-400 mr-2" /> Time tracking & billing</li>
                     <li className="flex items-center"><CheckCircle className="h-4 w-4 text-amber-400 mr-2" /> Document management</li>
                   </ul>
-                  <Button className="w-full bg-amber-400 hover:bg-amber-500 text-slate-900">
-                    Start Free Trial
-                  </Button>
+                  <Link to="/signup">
+                    <Button className="w-full bg-amber-400 hover:bg-amber-500 text-slate-900">
+                      Start Free Trial
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -308,9 +330,11 @@ const Index = () => {
                     <li className="flex items-center"><CheckCircle className="h-4 w-4 text-amber-400 mr-2" /> API integrations</li>
                     <li className="flex items-center"><CheckCircle className="h-4 w-4 text-amber-400 mr-2" /> Priority support</li>
                   </ul>
-                  <Button className="w-full bg-amber-400 hover:bg-amber-500 text-slate-900">
-                    Start Free Trial
-                  </Button>
+                  <Link to="/signup">
+                    <Button className="w-full bg-amber-400 hover:bg-amber-500 text-slate-900">
+                      Start Free Trial
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -328,9 +352,11 @@ const Index = () => {
                     <li className="flex items-center"><CheckCircle className="h-4 w-4 text-amber-400 mr-2" /> Dedicated support</li>
                     <li className="flex items-center"><CheckCircle className="h-4 w-4 text-amber-400 mr-2" /> Custom training</li>
                   </ul>
-                  <Button variant="outline" className="w-full border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900">
-                    Contact Sales
-                  </Button>
+                  <Link to="/signup">
+                    <Button variant="outline" className="w-full border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900">
+                      Contact Sales
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -348,10 +374,12 @@ const Index = () => {
             Join thousands of legal professionals who have streamlined their practice with Quantum Apex Legal.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white text-lg px-8 py-3">
-              Start Your 30-Day Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/signup">
+              <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white text-lg px-8 py-3">
+                Start Your 30-Day Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white text-lg px-8 py-3">
               Schedule a Demo
             </Button>
